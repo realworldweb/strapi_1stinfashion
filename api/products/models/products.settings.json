@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "products"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "float"
+    },
+    "sizes": {
+      "collection": "sizes",
+      "via": "products"
+    },
+    "sub_categories": {
+      "via": "products",
+      "collection": "sub-categories"
+    },
+    "options": {
+      "via": "products",
+      "collection": "options"
+    },
+    "categories": {
+      "via": "products",
+      "collection": "categories"
+    }
+  }
+}

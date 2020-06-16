@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_infos",
+  "info": {
+    "name": "contactInfo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "mainEmail": {
+      "type": "email"
+    },
+    "secondaryEmail": {
+      "type": "email"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    }
+  }
+}
